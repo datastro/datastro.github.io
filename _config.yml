@@ -45,6 +45,9 @@ footer_links:
   - title: Github
     url: https://github.com/datastro
     icon: fab fa-github-square
+  - title: Email
+    url: mailto:yeonghojin@gmail.com
+    icon: fas fa-envelope-square
 
 
 

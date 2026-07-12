@@ -1,0 +1,13 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+sitemap: false
+---
+
+@charset "utf-8";
+
+// Match post titles and the site description to the same sans-serif font
+// used by the site title (was serif "Lora", which read as too old-fashioned).
+$title-font-family: "Source Sans Pro", sans-serif;
+$description-font-family: "Source Sans Pro", sans-serif;
+
+@import "so-simple";

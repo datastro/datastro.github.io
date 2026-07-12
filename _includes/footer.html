@@ -4,12 +4,16 @@
   {%- if site.footer_links -%}
     <div class="social-icons">
       {%- for footer_link in site.footer_links -%}
-        {%- if footer_link.url contains "://" -%}
+        {%- if footer_link.url contains "://" or footer_link.url contains "mailto:" -%}
           {%- assign url = footer_link.url -%}
         {%- else -%}
           {%- assign url = footer_link.url | relative_url -%}
         {%- endif -%}
-        <a class="social-icon" href="{{ url }}" target="_blank" rel="noopener noreferrer"><i class="{{ footer_link.icon | default: 'fas fa-link' }} fa-2x" title="{{ footer_link.title }}"></i></a>
+        {%- if footer_link.url contains "mailto:" -%}
+          <a class="social-icon" href="{{ url }}"><i class="{{ footer_link.icon | default: 'fas fa-link' }} fa-2x" title="{{ footer_link.title }}"></i></a>
+        {%- else -%}
+          <a class="social-icon" href="{{ url }}" target="_blank" rel="noopener noreferrer"><i class="{{ footer_link.icon | default: 'fas fa-link' }} fa-2x" title="{{ footer_link.title }}"></i></a>
+        {%- endif -%}
       {%- endfor -%}
     </div>
   {%- endif -%}
@@ -18,7 +22,7 @@
     {% if site.copyright %}
       {{ site.copyright | markdownify }}
     {% else %}
-      <p>&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. {{ site.data.text[site.locale].powered_by | default: "Powered by" }} <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}.</p>
     {% endif %}
   </div>
 </footer>
