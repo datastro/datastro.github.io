@@ -11,3 +11,13 @@ $title-font-family: "Source Sans Pro", sans-serif;
 $description-font-family: "Source Sans Pro", sans-serif;
 
 @import "so-simple";
+
+// Plain, selectable email address in the footer (copy-paste friendly,
+// intentionally not a mailto: link).
+.footer-email {
+  font-size: 0.75em;
+  margin: 0 0 0.5em;
+  opacity: 0.65;
+  user-select: all;
+  cursor: text;
+}
