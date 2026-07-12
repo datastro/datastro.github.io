@@ -1,0 +1,11 @@
+<!-- OneSignal 웹 푸시 알림 초기화 -->
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function (OneSignal) {
+    await OneSignal.init({
+      appId: "YOUR_ONESIGNAL_APP_ID",
+      // 위 appId 값만 OneSignal 대시보드의 Settings > Keys & IDs 에서 확인한 실제 App ID로 교체하세요.
+    });
+  });
+</script>
