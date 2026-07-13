@@ -6,7 +6,7 @@ categories: [독서]
 tags: [독서, 마이크브라운, 명왕성, 천문학]
 ---
 
-![나는 어쩌다 명왕성을 죽였나 표지](/image_raws/book_01.jpeg)
+![나는 어쩌다 명왕성을 죽였나 표지](/assets/images/posts/book_01.jpeg)
 
 너드의 정석? 닮고 싶은 저자.
 
