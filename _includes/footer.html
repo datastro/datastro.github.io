@@ -18,6 +18,8 @@
     <p class="footer-email">{{ site.email }}</p>
   {%- endif -%}
 
+  {% include visitor-counter.html %}
+
   <div class="copyright">
     {% if site.copyright %}
       {{ site.copyright | markdownify }}

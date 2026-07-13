@@ -3,6 +3,11 @@
 <link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/images/favicon-16x16.png' | relative_url }}">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
 
+{% if site.goatcounter_code %}
+<!-- GoatCounter 방문자 트래킹 -->
+<script data-goatcounter="https://{{ site.goatcounter_code }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+{% endif %}
+
 <!-- OneSignal 웹 푸시 알림 초기화 -->
 <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 <script>

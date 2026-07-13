@@ -50,6 +50,12 @@ footer_links:
 category_archive_path: "/categories/#"
 tag_archive_path: "/tags/#"
 
+# GoatCounter site code, e.g. "yoursite" for yoursite.goatcounter.com.
+# Sign up free at https://www.goatcounter.com/, then in Settings enable
+# "Allow adding visitor counts on your website" so the public counter
+# endpoint works. Leave blank to disable the visitor counter.
+goatcounter_code: "datastro"
+
 
 
 # Exclude from processing.
