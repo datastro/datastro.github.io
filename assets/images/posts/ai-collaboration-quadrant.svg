@@ -1,0 +1,53 @@
+<svg viewBox="0 0 800 640" xmlns="http://www.w3.org/2000/svg" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect x="0" y="0" width="800" height="640" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="400" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#222222">AI 협업 성과 매트릭스</text>
+  <text x="400" y="58" text-anchor="middle" font-size="14" fill="#555555">&#8220;계속 쓴다&#8221;와 &#8220;잘 쓴다&#8221;는 서로 다른 축이다</text>
+
+  <!-- Quadrant rects (plot area: x 100-700, y 90-510) -->
+  <rect x="100" y="90"  width="300" height="210" fill="#e8f3ea" stroke="#c9ded0"/>  <!-- TL: 독립적 전문가 -->
+  <rect x="400" y="90"  width="300" height="210" fill="#dceaf7" stroke="#b7d3ec"/>  <!-- TR: 진짜 협업자 -->
+  <rect x="100" y="300" width="300" height="210" fill="#f0f0f0" stroke="#d6d6d6"/>  <!-- BL: 무관심/이탈 -->
+  <rect x="400" y="300" width="300" height="210" fill="#fbe6e6" stroke="#f0c2c2"/>  <!-- BR: 고무도장형 -->
+
+  <!-- Axes -->
+  <line x1="100" y1="510" x2="100" y2="72"  stroke="#333333" stroke-width="2"/>
+  <line x1="100" y1="510" x2="718" y2="510" stroke="#333333" stroke-width="2"/>
+  <polygon points="100,64 94,78 106,78" fill="#333333"/>
+  <polygon points="726,510 712,504 712,516" fill="#333333"/>
+
+  <text x="410" y="536" font-size="14" fill="#333333">AI 사용 지속 정도 (행위주체감) &#8594;</text>
+  <text x="0" y="0" font-size="14" fill="#333333" transform="translate(28,470) rotate(-90)">실제 협업 성과 &#8593;</text>
+
+  <!-- Center divider lines (already edges of rects, add subtle emphasis) -->
+  <line x1="400" y1="90" x2="400" y2="510" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="100" y1="300" x2="700" y2="300" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- TL label -->
+  <text x="250" y="180" text-anchor="middle" font-size="17" font-weight="700" fill="#2f6b3f">독립적 전문가</text>
+  <text x="250" y="204" text-anchor="middle" font-size="12" fill="#4a7a58">AI 없이도 고성과 (드묾)</text>
+
+  <!-- TR label -->
+  <text x="550" y="172" text-anchor="middle" font-size="17" font-weight="700" fill="#1f5c94">진짜 협업자</text>
+  <text x="550" y="194" text-anchor="middle" font-size="12" fill="#33689a">(상호보완적 추론)</text>
+  <text x="550" y="214" text-anchor="middle" font-size="12" fill="#33689a">관점 취하기 · 지적 겸손 · 호기심</text>
+
+  <!-- BL label -->
+  <text x="250" y="400" text-anchor="middle" font-size="17" font-weight="700" fill="#555555">무관심 / 이탈</text>
+  <text x="250" y="422" text-anchor="middle" font-size="12" fill="#777777">낮은 사용, 낮은 성과</text>
+
+  <!-- BR label -->
+  <text x="550" y="392" text-anchor="middle" font-size="17" font-weight="700" fill="#a13d3d">고무도장형</text>
+  <text x="550" y="414" text-anchor="middle" font-size="12" fill="#b15252">(착각)</text>
+  <text x="550" y="434" text-anchor="middle" font-size="12" fill="#b15252">행위주체감 상승, 실질 성과는 정체·하락</text>
+
+  <!-- Footnote -->
+  <text x="400" y="580" text-anchor="middle" font-size="11" fill="#888888">
+    실제 관측된 그룹은 &#39;의존(다수)&#39; · &#39;고무도장(소수)&#39; · &#39;진짜 협업(소수)&#39; 3그룹 (Ming, 2026) —
+  </text>
+  <text x="400" y="596" text-anchor="middle" font-size="11" fill="#888888">
+    &#39;사용 지속&#39; 축은 Beacock 외(2026)의 행위주체감 연구를 더해 재구성한 것
+  </text>
+  <text x="400" y="620" text-anchor="middle" font-size="10" fill="#aaaaaa">Source: arXiv:2607.02467 (Ming, 2026) · arXiv:2607.02313 (Beacock et al., 2026) — 저자 재구성 도식</text>
+</svg>
