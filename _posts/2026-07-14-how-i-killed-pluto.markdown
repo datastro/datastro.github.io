@@ -3,7 +3,7 @@ layout: post
 title: "도서: 『나는 어쩌다 명왕성을 죽였나』"
 date: 2026-07-14 00:18:07 +0900
 categories: [독서]
-tags: [독서, 마이크브라운, 명왕성, 천문학, 자유도서]
+tags: [독서, 천문학, 자유도서]
 ---
 
 ![나는 어쩌다 명왕성을 죽였나 표지](/assets/images/posts/book_01.jpeg)

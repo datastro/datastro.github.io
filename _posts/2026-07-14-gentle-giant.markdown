@@ -3,7 +3,7 @@ layout: post
 title: "도서: 『다정한 거인』"
 date: 2026-07-14 23:10:09 +0900
 categories: [독서]
-tags: [독서, 남종영, 고래, 환경, 지정도서]
+tags: [독서, 환경, 지정도서]
 ---
 
 ![다정한 거인 표지](/assets/images/posts/book_02.jpeg)
