@@ -56,6 +56,10 @@ tag_archive_path: "/tags/#"
 # endpoint works. Leave blank to disable the visitor counter.
 goatcounter_code: "datastro"
 
+# Google Analytics 4 Measurement ID, e.g. "G-XXXXXXXXXX".
+# Create a property at https://analytics.google.com. Leave blank to disable.
+google_analytics: "G-Q66804Y4RZ"
+
 
 
 # Exclude from processing.
