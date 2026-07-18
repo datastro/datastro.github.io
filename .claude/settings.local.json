@@ -59,7 +59,8 @@
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
       "Bash(git check-ignore *)",
-      "Bash(echo \"exit:$?\")"
+      "Bash(echo \"exit:$?\")",
+      "Bash(ls -la \"/Users/data_plotly/.claude/projects/-Users-data-plotly-Library-Mobile-Documents-com-apple-CloudDocs-Documents-blog-datastro-github-io/\" 2>&1; echo \"---parent---\"; ls \"/Users/data_plotly/.claude/projects/\" 2>&1 | head -20)"
     ]
   }
 }
