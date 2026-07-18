@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "강화 강성보 밤하늘 사진 – Nikon D7500 천체사진 촬영 노트"
+title: "별노트: 강화 강성보"
 date: 2026-07-18 20:43:00 +0900
 categories: [천체사진]
 tags: [천체사진, 밤하늘, Nikon D7500, 별사진, 야경]
