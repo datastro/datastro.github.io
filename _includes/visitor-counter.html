@@ -3,29 +3,14 @@
 <script>
   (function () {
     var code = {{ site.goatcounter_code | jsonify }};
-    var base = "https://" + code + ".goatcounter.com/counter/TOTAL.json";
+    var url = "https://" + code + ".goatcounter.com/counter/TOTAL.json";
     var el = document.getElementById("visitor-counter");
 
-    function pad(n) { return n < 10 ? "0" + n : "" + n; }
-    function today() {
-      var d = new Date();
-      return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
-    }
-    function fetchCount(url) {
-      return fetch(url).then(function (res) {
-        if (!res.ok) throw new Error("goatcounter request failed");
-        return res.json();
-      }).then(function (data) {
-        return data.count;
-      });
-    }
-
-    var todayStr = today();
-    Promise.all([
-      fetchCount(base),
-      fetchCount(base + "?start=" + todayStr + "&end=" + todayStr)
-    ]).then(function (results) {
-      el.textContent = "오늘 방문자 " + results[1] + " · 전체 방문자 " + results[0];
+    fetch(url).then(function (res) {
+      if (!res.ok) throw new Error("goatcounter request failed");
+      return res.json();
+    }).then(function (data) {
+      el.textContent = "전체 방문자 " + data.count;
     }).catch(function () {
       // GoatCounter site not set up yet, or the public counter setting is
       // off ("Allow adding visitor counts on your website") — fail quietly.

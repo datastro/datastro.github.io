@@ -54,7 +54,12 @@
       "Bash(curl -s -i \"https://datastro.goatcounter.com/counter/TOTAL.json\")",
       "Bash(curl -s \"https://datastro.goatcounter.com/counter/TOTAL.json\")",
       "Bash(curl -s -i \"https://datastro.goatcounter.com/counter/TOTAL.html\")",
-      "Bash(curl -s \"https://datastro.github.io/\")"
+      "Bash(curl -s \"https://datastro.github.io/\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git check-ignore *)",
+      "Bash(echo \"exit:$?\")"
     ]
   }
 }
