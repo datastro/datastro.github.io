@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "별노트: 강화 강성보"
+title: "별노트: 강화 광성보"
 date: 2026-07-18 20:43:00 +0900
 categories: [천체사진]
 tags: [천체사진, 밤하늘, 별사진, 야경]
 ---
 
 **촬영 장소:**  
-  📍 [강화 강성보 (네이버 지도)](https://naver.me/Fw7iSyFE)  
+  📍 [강화 광성보 (네이버 지도)](https://naver.me/Fw7iSyFE)  
   
 **촬영 일시:**  
   2026-07-18 20:43 ~ 21:20 KST
