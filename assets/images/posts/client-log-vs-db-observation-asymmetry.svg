@@ -1,0 +1,42 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect x="0" y="0" width="900" height="560" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="450" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#222222">정교하게 만들어도 남는 관측 비대칭</text>
+  <text x="450" y="56" text-anchor="middle" font-size="13" fill="#666666">로그가 관측한 상태 전이와 DB가 기록한 상태 전이는 애초에 같은 집합이 아니다</text>
+
+  <!-- Circle A: 클라이언트 로그 -->
+  <circle cx="330" cy="320" r="190" fill="#dceaf7" fill-opacity="0.55" stroke="#5f92c4" stroke-width="2"/>
+  <!-- Circle B: DB 히스토리 -->
+  <circle cx="570" cy="320" r="190" fill="#e8f3ea" fill-opacity="0.55" stroke="#5f9e73" stroke-width="2"/>
+
+  <!-- Labels above circles -->
+  <text x="230" y="110" text-anchor="middle" font-size="15" font-weight="700" fill="#1f5c94">클라이언트 로그가</text>
+  <text x="230" y="130" text-anchor="middle" font-size="15" font-weight="700" fill="#1f5c94">관측한 상태 전이</text>
+
+  <text x="670" y="110" text-anchor="middle" font-size="15" font-weight="700" fill="#2f6b3f">DB 히스토리가</text>
+  <text x="670" y="130" text-anchor="middle" font-size="15" font-weight="700" fill="#2f6b3f">기록한 상태 전이</text>
+
+  <!-- Left-only text -->
+  <text x="210" y="300" text-anchor="middle" font-size="13" font-weight="700" fill="#1f5c94">로그에만 있음</text>
+  <text x="210" y="324" text-anchor="middle" font-size="11" fill="#33689a">로컬 검증 실패,</text>
+  <text x="210" y="342" text-anchor="middle" font-size="11" fill="#33689a">중복 탭 등</text>
+  <text x="210" y="360" text-anchor="middle" font-size="11" fill="#33689a">서버가 모르는 사건</text>
+
+  <!-- Overlap text -->
+  <text x="450" y="310" text-anchor="middle" font-size="13" font-weight="700" fill="#3a3a3a">일치하는 사건</text>
+  <text x="450" y="332" text-anchor="middle" font-size="11" fill="#555555">정상적으로 조인되는</text>
+  <text x="450" y="350" text-anchor="middle" font-size="11" fill="#555555">대다수의 케이스</text>
+
+  <!-- Right-only text -->
+  <text x="690" y="300" text-anchor="middle" font-size="13" font-weight="700" fill="#2f6b3f">DB에만 있음</text>
+  <text x="690" y="324" text-anchor="middle" font-size="11" fill="#4a7a58">PG 비동기 웹훅,</text>
+  <text x="690" y="342" text-anchor="middle" font-size="11" fill="#4a7a58">CS 수동 처리 등</text>
+  <text x="690" y="360" text-anchor="middle" font-size="11" fill="#4a7a58">클라이언트 관여 없음</text>
+
+  <!-- Bottom note -->
+  <rect x="60" y="470" width="780" height="72" rx="8" fill="#fbe6e6" stroke="#f0c2c2"/>
+  <text x="450" y="497" text-anchor="middle" font-size="12" font-weight="700" fill="#a13d3d">겹치는 영역의 경계조차 뚜렷하지 않다</text>
+  <text x="450" y="518" text-anchor="middle" font-size="11" fill="#a1544d">클라이언트 시계와 서버 시계 사이의 오차 때문에, 타임스탬프로 두 사건을 짝짓는 작업 자체가</text>
+  <text x="450" y="534" text-anchor="middle" font-size="11" fill="#a1544d">근사치이며 — 히스토리 테이블과 property를 아무리 정교화해도 이 세 영역의 존재는 사라지지 않는다</text>
+</svg>

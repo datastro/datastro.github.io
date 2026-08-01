@@ -87,7 +87,25 @@
       "Bash(python3 -c \"import PIL; print\\('PIL OK', PIL.__version__\\)\")",
       "Bash(python3)",
       "Bash(cp /tmp/bookcover_work/py_final.jpeg \"/Users/data_plotly/Library/Mobile Documents/com~apple~CloudDocs/Documents/blog/datastro.github.io/assets/images/posts/book_05.jpeg\")",
-      "Bash(rm -rf /tmp/bookcover_work)"
+      "Bash(rm -rf /tmp/bookcover_work)",
+      "Skill(fewer-permission-prompts)",
+      "Skill(fewer-permission-prompts:*)",
+      "Bash(cd /tmp *)",
+      "Bash(mkdir -p /tmp/bookcover2_work)",
+      "Bash(sips -s format jpeg assets_raws/IMG_1255.HEIC --out /tmp/bookcover2_work/raw.jpeg)",
+      "Bash(sips -g pixelWidth -g pixelHeight /tmp/bookcover2_work/raw.jpeg)",
+      "Bash(cp /tmp/bookcover2_work/final.jpeg \"/Users/data_plotly/Library/Mobile Documents/com~apple~CloudDocs/Documents/blog/datastro.github.io/assets/images/posts/book_06.jpeg\")",
+      "Bash(rm -rf /tmp/bookcover2_work)",
+      "Bash(sort -k6,7)",
+      "Bash(cp /tmp/bookcover3_work/final.jpeg \"/Users/data_plotly/Library/Mobile Documents/com~apple~CloudDocs/Documents/blog/datastro.github.io/assets/images/posts/book_07.jpeg\")",
+      "Bash(rm -rf /tmp/bookcover3_work)",
+      "Bash(mkdir -p /tmp/space_book_work)",
+      "Bash(sips -s format jpeg assets_raws/IMG_1298.HEIC --out /tmp/space_book_work/raw.jpeg)",
+      "Bash(sips -g pixelWidth -g pixelHeight /tmp/space_book_work/raw.jpeg assets_raws/JWST.jpg)",
+      "Bash(cp /tmp/space_book_work/book_final.jpeg assets/images/posts/book_08.jpeg)",
+      "Bash(rm -rf /tmp/space_book_work)",
+      "Bash(rm .git/HEAD.lock .git/refs/heads/main.lock)",
+      "Bash(git update-ref *)"
     ]
   }
 }

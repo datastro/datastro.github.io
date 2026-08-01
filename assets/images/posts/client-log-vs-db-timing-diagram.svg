@@ -1,0 +1,61 @@
+<svg viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" font-family="'Apple SD Gothic Neo','Malgun Gothic',sans-serif">
+  <rect x="0" y="0" width="900" height="520" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="450" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#222222">로그는 &#8220;의도&#8221;를, DB는 &#8220;결과&#8221;를 기록한다</text>
+  <text x="450" y="56" text-anchor="middle" font-size="13" fill="#666666">외화 충전 시도를 예로 든 이벤트 기록 시점 비교</text>
+
+  <!-- Box A: 사용자 액션 -->
+  <rect x="30" y="150" width="150" height="70" rx="8" fill="#f0f0f0" stroke="#c9c9c9"/>
+  <text x="105" y="180" text-anchor="middle" font-size="14" font-weight="700" fill="#333333">사용자 액션</text>
+  <text x="105" y="200" text-anchor="middle" font-size="12" fill="#555555">충전 버튼 탭</text>
+
+  <!-- Arrow A->B -->
+  <line x1="180" y1="185" x2="228" y2="185" stroke="#333333" stroke-width="2"/>
+  <polygon points="228,185 216,180 216,190" fill="#333333"/>
+
+  <!-- Box B: 클라이언트 로그 기록 (always) -->
+  <rect x="230" y="140" width="200" height="90" rx="8" fill="#e8f3ea" stroke="#c9ded0"/>
+  <text x="330" y="168" text-anchor="middle" font-size="14" font-weight="700" fill="#2f6b3f">클라이언트 로그 기록</text>
+  <text x="330" y="188" text-anchor="middle" font-size="12" fill="#4a7a58">"충전_시도" 이벤트</text>
+  <text x="330" y="206" text-anchor="middle" font-size="11" fill="#4a7a58">액션 즉시, 항상 남음</text>
+
+  <!-- Arrow B->C -->
+  <line x1="430" y1="185" x2="478" y2="185" stroke="#333333" stroke-width="2"/>
+  <polygon points="478,185 466,180 466,190" fill="#333333"/>
+
+  <!-- Box C: 서버 처리 -->
+  <rect x="480" y="130" width="220" height="110" rx="8" fill="#dceaf7" stroke="#b7d3ec"/>
+  <text x="590" y="156" text-anchor="middle" font-size="14" font-weight="700" fill="#1f5c94">서버 처리 단계</text>
+  <text x="590" y="180" text-anchor="middle" font-size="12" fill="#33689a">잔액 확인 &#8594; 환율 적용</text>
+  <text x="590" y="200" text-anchor="middle" font-size="12" fill="#33689a">&#8594; PG사 승인</text>
+  <text x="590" y="222" text-anchor="middle" font-size="11" fill="#5a83a8">이 단계를 다 통과해야 확정</text>
+
+  <!-- Branch success arrow -->
+  <line x1="700" y1="160" x2="748" y2="120" stroke="#2f6b3f" stroke-width="2"/>
+  <polygon points="748,120 734,120 740,132" fill="#2f6b3f"/>
+  <text x="720" y="102" text-anchor="middle" font-size="11" fill="#2f6b3f">모두 통과</text>
+
+  <!-- Branch fail arrow -->
+  <line x1="700" y1="210" x2="748" y2="260" stroke="#a13d3d" stroke-width="2"/>
+  <polygon points="748,260 736,254 738,266" fill="#a13d3d"/>
+  <text x="722" y="290" text-anchor="middle" font-size="11" fill="#a13d3d">중간 실패</text>
+
+  <!-- Box D: DB 완료 -->
+  <rect x="750" y="70" width="140" height="80" rx="8" fill="#e8f3ea" stroke="#c9ded0"/>
+  <text x="820" y="98" text-anchor="middle" font-size="13" font-weight="700" fill="#2f6b3f">DB 레코드 생성</text>
+  <text x="820" y="118" text-anchor="middle" font-size="12" fill="#4a7a58">"충전_완료"</text>
+  <text x="820" y="136" text-anchor="middle" font-size="10" fill="#4a7a58">확정된 결과만 기록</text>
+
+  <!-- Box E: DB 없음 -->
+  <rect x="750" y="260" width="140" height="90" rx="8" fill="#f6f6f6" stroke="#d6d6d6" stroke-dasharray="5,4"/>
+  <text x="820" y="288" text-anchor="middle" font-size="13" font-weight="700" fill="#777777">DB 레코드 없음</text>
+  <text x="820" y="308" text-anchor="middle" font-size="11" fill="#888888">잔액부족 / PG 타임아웃</text>
+  <text x="820" y="326" text-anchor="middle" font-size="11" fill="#888888">/ 서버 검증 실패 등</text>
+
+  <!-- Bottom annotation -->
+  <rect x="30" y="400" width="860" height="90" rx="8" fill="#fbe6e6" stroke="#f0c2c2"/>
+  <text x="460" y="428" text-anchor="middle" font-size="13" font-weight="700" fill="#a13d3d">로그의 "충전_시도"는 항상 남지만, DB의 "충전_완료"는 성공한 건만 남는다</text>
+  <text x="460" y="452" text-anchor="middle" font-size="12" fill="#a1544d">두 시스템이 애초에 서로 다른 단계(시도 vs 확정 결과)를 기록하고 있으므로,</text>
+  <text x="460" y="472" text-anchor="middle" font-size="12" fill="#a1544d">이 구간에서 생기는 로그·DB 건수 차이는 결함이 아니라 구조적으로 당연한 결과다</text>
+</svg>
