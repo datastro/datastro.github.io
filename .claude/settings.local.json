@@ -118,7 +118,9 @@
       "Bash(git fetch *)",
       "Bash(gh auth *)",
       "Bash(gh api *)",
-      "Bash(curl -sI \"https://datastro.github.io/\")"
+      "Bash(curl -sI \"https://datastro.github.io/\")",
+      "Bash(sips -g pixelWidth -g pixelHeight assets/images/posts/DSC_3028.jpg assets/images/posts/DSC_3032.jpg assets/images/posts/jwst-first-deep-field.jpg)",
+      "Bash(ls -t ~/.claude/projects/*/*.jsonl 2>/dev/null | head -50 | wc -l *)"
     ]
   }
 }
