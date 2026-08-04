@@ -105,7 +105,16 @@
       "Bash(cp /tmp/space_book_work/book_final.jpeg assets/images/posts/book_08.jpeg)",
       "Bash(rm -rf /tmp/space_book_work)",
       "Bash(rm .git/HEAD.lock .git/refs/heads/main.lock)",
-      "Bash(git update-ref *)"
+      "Bash(git update-ref *)",
+      "Bash(sips -g pixelWidth -g pixelHeight assets_raws/book_01.jpeg)",
+      "Bash(sips -r 90 assets_raws/IMG_1348.jpeg --out __TRACKED_VAR__/rotated_test.jpeg)",
+      "Bash(sips -g pixelWidth -g pixelHeight __TRACKED_VAR__/rotated_test.jpeg)",
+      "Bash(sips -z 500 375 /private/tmp/claude-501/-Users-data-plotly-Library-Mobile-Documents-com-apple-CloudDocs-Documents-blog-datastro-github-io/918cbda7-34a5-4865-8e34-df803c39512c/scratchpad/rotated_test.jpeg --out assets/images/posts/book_10.jpeg)",
+      "Bash(sips -g pixelWidth -g pixelHeight \"assets/images/posts/book_10.jpeg\")",
+      "Bash(sips -g pixelWidth -g pixelHeight -g orientation assets/images/posts/book_10.jpeg)",
+      "Bash(python3 -c \"from PIL import Image, ImageOps; print\\('ok'\\)\")",
+      "Bash(python3 -)",
+      "Bash(sips -g pixelWidth -g pixelHeight assets/images/posts/book_10.jpeg)"
     ]
   }
 }
