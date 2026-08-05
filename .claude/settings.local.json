@@ -120,7 +120,13 @@
       "Bash(gh api *)",
       "Bash(curl -sI \"https://datastro.github.io/\")",
       "Bash(sips -g pixelWidth -g pixelHeight assets/images/posts/DSC_3028.jpg assets/images/posts/DSC_3032.jpg assets/images/posts/jwst-first-deep-field.jpg)",
-      "Bash(ls -t ~/.claude/projects/*/*.jsonl 2>/dev/null | head -50 | wc -l *)"
+      "Bash(ls -t ~/.claude/projects/*/*.jsonl 2>/dev/null | head -50 | wc -l *)",
+      "Bash(mkdir -p /private/tmp/claude-501/-Users-data-plotly-Library-Mobile-Documents-com-apple-CloudDocs-Documents-blog-datastro-github-io/c7b24706-12a0-4558-bfc9-eb684ae759b4/scratchpad)",
+      "Bash(sips -r 90 ./assets_raws/IMG_1347.jpeg --out /private/tmp/claude-501/-Users-data-plotly-Library-Mobile-Documents-com-apple-CloudDocs-Documents-blog-datastro-github-io/c7b24706-12a0-4558-bfc9-eb684ae759b4/scratchpad/test_r90.jpeg)",
+      "Bash(sips -r -90 ./assets_raws/IMG_1347.jpeg --out /private/tmp/claude-501/-Users-data-plotly-Library-Mobile-Documents-com-apple-CloudDocs-Documents-blog-datastro-github-io/c7b24706-12a0-4558-bfc9-eb684ae759b4/scratchpad/test_rneg90.jpeg)",
+      "Bash(sips -c 800 1500 -p 5100 300 /private/tmp/claude-501/-Users-data-plotly-Library-Mobile-Documents-com-apple-CloudDocs-Documents-blog-datastro-github-io/c7b24706-12a0-4558-bfc9-eb684ae759b4/scratchpad/test_r90.jpeg --out /private/tmp/claude-501/-Users-data-plotly-Library-Mobile-Documents-com-apple-CloudDocs-Documents-blog-datastro-github-io/c7b24706-12a0-4558-bfc9-eb684ae759b4/scratchpad/test_bottom.jpeg)",
+      "Bash(python3 -c \"from PIL import Image; print\\('PIL ok'\\)\")",
+      "Bash(python3 -c ' *)"
     ]
   }
 }
