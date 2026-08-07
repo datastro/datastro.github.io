@@ -126,7 +126,14 @@
       "Bash(sips -r -90 ./assets_raws/IMG_1347.jpeg --out /private/tmp/claude-501/-Users-data-plotly-Library-Mobile-Documents-com-apple-CloudDocs-Documents-blog-datastro-github-io/c7b24706-12a0-4558-bfc9-eb684ae759b4/scratchpad/test_rneg90.jpeg)",
       "Bash(sips -c 800 1500 -p 5100 300 /private/tmp/claude-501/-Users-data-plotly-Library-Mobile-Documents-com-apple-CloudDocs-Documents-blog-datastro-github-io/c7b24706-12a0-4558-bfc9-eb684ae759b4/scratchpad/test_r90.jpeg --out /private/tmp/claude-501/-Users-data-plotly-Library-Mobile-Documents-com-apple-CloudDocs-Documents-blog-datastro-github-io/c7b24706-12a0-4558-bfc9-eb684ae759b4/scratchpad/test_bottom.jpeg)",
       "Bash(python3 -c \"from PIL import Image; print\\('PIL ok'\\)\")",
-      "Bash(python3 -c ' *)"
+      "Bash(python3 -c ' *)",
+      "Bash(cp \"/Users/data_plotly/Library/Mobile Documents/com~apple~CloudDocs/Documents/blog/datastro.github.io/assets_raws/IMG_1350.jpeg\" ./sidereus_raw.jpeg)",
+      "Bash(sips --rotate 90 sidereus_raw.jpeg --out sidereus_rot.jpeg)",
+      "Bash(sips --cropToHeightWidth 5712 4000 --cropOffset 0 200 sidereus_rot.jpeg --out sidereus_crop.jpeg)",
+      "Bash(sips -s format bmp sidereus_crop.jpeg --out sidereus.bmp)",
+      "Bash(sips -z 500 350 sidereus.bmp --out sidereus_small.bmp)",
+      "Bash(sips -s format jpeg -s formatOptions 80 sidereus_small.bmp --out book_12.jpeg)",
+      "Bash(sips -z 500 350 sidereus_crop.jpeg --out book_12_direct.jpeg)"
     ]
   }
 }
