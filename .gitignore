@@ -3,4 +3,5 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
-assets_raws//datastro.github.io/
+assets_raws/
+/datastro.github.io/
