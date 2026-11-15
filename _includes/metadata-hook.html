@@ -1,0 +1,47 @@
+<!-- 사이트 전용 커스텀 스크립트 (Chirpy의 <head> 끝에 삽입됨) -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    /* 외부 사이트로 가는 링크는 새 탭에서 열기 */
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      var href = a.getAttribute('href');
+      if (!href || href.indexOf('#') === 0 || href.indexOf('mailto:') === 0 || href.indexOf('tel:') === 0) return;
+      if (a.hostname && a.hostname !== window.location.hostname) {
+        a.setAttribute('target', '_blank');
+        a.setAttribute('rel', 'noopener noreferrer');
+      }
+    });
+
+    {% if site.analytics.goatcounter.id %}
+    /* 푸터에 전체 방문자 수 표시 (GoatCounter 공개 카운터) */
+    var footer = document.querySelector('footer');
+    if (!footer) return;
+    var url = 'https://' + {{ site.analytics.goatcounter.id | jsonify }} + '.goatcounter.com/counter/TOTAL.json';
+    fetch(url)
+      .then(function (res) {
+        if (!res.ok) throw new Error('goatcounter request failed');
+        return res.json();
+      })
+      .then(function (data) {
+        var p = document.createElement('p');
+        p.className = 'visitor-counter';
+        p.textContent = '전체 방문자 ' + data.count;
+        footer.appendChild(p);
+      })
+      .catch(function () {
+        /* 공개 카운터가 꺼져 있거나 요청이 실패하면 조용히 넘어감 */
+      });
+    {% endif %}
+  });
+</script>
+
+{% if site.onesignal_app_id %}
+<!-- OneSignal 웹 푸시 알림 -->
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function (OneSignal) {
+    await OneSignal.init({ appId: {{ site.onesignal_app_id | jsonify }} });
+  });
+</script>
+{% endif %}

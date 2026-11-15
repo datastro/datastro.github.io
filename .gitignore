@@ -1,7 +1,29 @@
-_site
-.sass-cache
+# Bundler cache
+.bundle
+vendor
+
+# Jekyll cache
 .jekyll-cache
 .jekyll-metadata
-vendor
+.sass-cache
+_site
+
+# RubyGems
+*.gem
+
+# NPM dependencies
+node_modules
+package-lock.json
+
+# Misc
+_sass/vendors
+assets/js/dist
+
+# Hidden system files
+*~
+.DS_Store
+Thumbs.db
+
+# 원본 사진·데이터 (저장소에 올리지 않음)
 assets_raws/
 /datastro.github.io/

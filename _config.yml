@@ -1,84 +1,209 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# The Site Configuration (Chirpy)
+# 이 파일은 `bundle exec jekyll serve` 중에 자동으로 다시 읽히지 않습니다. 수정 후 서버를 재시작하세요.
 
-locale: "ko-KR"
-timezone: Asia/Seoul
-future: true
-title: 데이터 분석가의 기록 데이터 공간
-email: yeonghojin@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  낮에는 데이터를, 밤에는 별을 봅니다. 가끔 책도 봅니다.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://datastro.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: jekyllrb
-logo: "/assets/images/logo.jpg"
+# Import the theme
+theme: jekyll-theme-chirpy
 
-author:
-  name: datastro
-  # picture: TBD
-
-# Build settings
-# theme: minima
-# plugins:
-#   - jekyll-feed
-remote_theme: "mmistakes/so-simple-theme@3.2.0"
 plugins:
-  - jekyll-remote-theme
-  - jekyll-feed
+  - jekyll-redirect-from
 
-footer_links:
-  - title: Github
-    url: https://github.com/datastro
-    icon: fab fa-github-square
+# 레이아웃 언어 (_data/locales/ko-KR.yml), <html lang> 속성에도 사용됩니다.
+lang: ko-KR
 
-category_archive_path: "/categories/#"
-tag_archive_path: "/tags/#"
+timezone: Asia/Seoul
 
-# GoatCounter site code, e.g. "yoursite" for yoursite.goatcounter.com.
-# Sign up free at https://www.goatcounter.com/, then in Settings enable
-# "Allow adding visitor counts on your website" so the public counter
-# endpoint works. Leave blank to disable the visitor counter.
-goatcounter_code: "datastro"
+# jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
+# ↓ --------------------------
 
-# Google Analytics 4 Measurement ID, e.g. "G-XXXXXXXXXX".
-# Create a property at https://analytics.google.com. Leave blank to disable.
-google_analytics: "G-Q66804Y4RZ"
+title: 데이터 분석가의 기록 데이터 공간 # the main title
 
+tagline: 낮에는 데이터를, 밤에는 별을 봅니다. 가끔 책도 봅니다. # 사이드바 부제
 
+description: >- # 검색 결과 설명(meta description)과 RSS 피드에 사용
+  데이터 분석가 datastro의 블로그. 머신러닝·시계열 데이터 분석 실습, 과학·철학·소설 독후감,
+  돕소니언 망원경으로 찍은 천체사진과 밤하늘 관측 기록을 정리합니다.
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# 끝에 '/'를 붙이지 않습니다.
+url: "https://datastro.github.io"
+
+github:
+  username: datastro
+
+social:
+  # 글 작성자 기본값이자 푸터 저작권자 이름
+  name: datastro
+  email: yeonghojin@gmail.com
+  fediverse_handle:
+  links:
+    # 첫 번째 링크가 푸터 저작권자 링크로 쓰입니다.
+    - https://github.com/datastro
+
+# Site Verification Settings (Search Console 등에서 받은 코드를 넣으면 소유권 확인용 meta 태그가 추가됩니다)
+webmaster_verifications:
+  google:
+  bing:
+  alexa:
+  yandex:
+  baidu:
+  facebook:
+
+# ↑ --------------------------
+# The end of `jekyll-seo-tag` settings
+
+# Web Analytics Settings (JEKYLL_ENV=production 빌드에서만 삽입됩니다)
+analytics:
+  google:
+    id: G-Q66804Y4RZ
+  goatcounter:
+    id: datastro # datastro.goatcounter.com
+  umami:
+    id:
+    domain:
+  matomo:
+    id:
+    domain:
+  cloudflare:
+    id:
+  fathom:
+    id:
+
+# 글별 조회수 표시. GoatCounter 설정에서
+# "Allow adding visitor counts on your website"가 켜져 있어야 합니다.
+pageviews:
+  provider: goatcounter
+
+# OneSignal 웹 푸시 App ID (Settings > Keys & IDs). 비워 두면 OneSignal을 불러오지 않습니다.
+onesignal_app_id:
+
+# 비워 두면 시스템 설정을 따르고, 사이드바 하단에 라이트/다크 전환 버튼이 생깁니다. [light | dark]
+theme_mode:
+
+cdn:
+
+# 사이드바 프로필 이미지
+avatar: /assets/images/logo.jpg
+
+# 글에 image가 없을 때 쓰이는 기본 og:image (SNS 공유 미리보기)
+social_preview_image: /assets/images/logo.jpg
+
+# boolean type, the global switch for TOC in posts.
+toc: true
+
+actions:
+  edit_post:
+    enabled: false
+    url: ""
+    static_url: false
+
+comments:
+  # 비워 두면 댓글 기능을 끕니다. [disqus | utterances | giscus]
+  provider:
+  disqus:
+    shortname:
+  utterances:
+    repo:
+    issue_term:
+  giscus:
+    repo:
+    repo_id:
+    category:
+    category_id:
+    mapping:
+    strict:
+    input_position:
+    lang:
+    reactions_enabled:
+
+# Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
+assets:
+  self_host:
+    enabled:
+    env:
+
+pwa:
+  enabled: true # 홈 화면에 앱처럼 설치 가능
+  cache:
+    enabled: true
+    deny_paths:
+
+paginate: 10
+
+baseurl: ""
+
+# 'future: true' 는 이전 설정에서 그대로 유지 (발행일이 미래인 글도 빌드)
+future: true
+
+# ------------ The following options are not recommended to be modified ------------------
+
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      comments: true
+      toc: true
+      # 이전 테마(So Simple)에서 쓰던 주소 형식을 그대로 유지합니다.
+      # 예: /독서/2026/07/14/gentle-giant.html
+      # 바꾸면 이미 검색엔진에 색인된 글 주소가 모두 깨지므로 수정하지 마세요.
+      permalink: /:categories/:year/:month/:day/:title:output_ext
+  - scope:
+      path: _drafts
+    values:
+      comments: false
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
+
+sass:
+  style: compressed
+
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - purgecss.js
+  - "*.config.js"
+  - "package*.json"
+  - assets_raws # 원본 사진·데이터 (배포 대상 아님)
+  - temp_post # 작성 중인 초안
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
