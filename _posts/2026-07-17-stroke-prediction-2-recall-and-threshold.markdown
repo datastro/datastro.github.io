@@ -4,6 +4,7 @@ title: "데이터: 뇌졸중 예측 모델링(2/3) - Recall만 쫓다 보면.."
 date: 2026-07-17 01:40:00 +0900
 categories: [데이터·분석]
 tags: [데이터분석, 머신러닝, 불균형데이터]
+description: "뇌졸중 예측 모델링 3부작의 2편. Recall·Precision·Specificity·F1·PR-AUC 지표를 정리하고, 불균형 데이터에서 threshold를 0.5에서 0.028로 낮춰 recall 0.80을 얻는 대신 precision이 0.07로 떨어지는 트레이드오프와, Recall 우선 스크리닝 전략이 실제 검진 현장에서 갖는 의미를 짚었다."
 ---
 
 1부에서 국민건강영양조사 데이터로 뇌졸중 예측 모델을 만들었다. AUC는 0.78~0.82로 다섯 개 모델 모두 준수했는데, 정작 threshold 0.5에서 예측을 시켜보면 Logistic Regression·RandomForest·GradientBoosting은 뇌졸중 사례를 단 한 건도 양성으로 못 잡아낸다. Recall이 0이다. 이 글에서는 이 문제를 어떻게 다뤘는지, 그리고 "Recall을 우선시하는 스크리닝 모델링"이 정말 정답인지 생각한 내용을 정리해보려고 한다.
